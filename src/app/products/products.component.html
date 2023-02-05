@@ -1,0 +1,23 @@
+<p>products works!</p>
+<h1>{{storeName}}</h1>
+
+<img [src]="storeLogo">
+
+<h3 [ngClass]="{hide:discount==0}">We offer an explicit discount of:{{discount}}</h3>
+
+<select >
+    <option *ngFor="let item of categoryList">{{item.name}}</option>
+</select>
+
+<table>
+    <tr *ngFor="let item of productList">
+        <td>{{item.id}}</td>
+        <td><img width="100" [src]="item.imgURL"></td>
+        <td>{{item.name}}</td>
+        <td>{{item.price}}</td>
+        <td>{{item.quantity}}</td>
+    </tr>
+</table>
+
+<input type="text" [(ngModel)]="clientName">
+<p>{{clientName}}</p>
